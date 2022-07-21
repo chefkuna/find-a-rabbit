@@ -4,9 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scroll</title>
-    <style></style>
+    <style>
+      body {
+        background-color: black;
+        text-align: center;
+      }
+
+      .find{
+        background-color: salmon;
+        color: white;
+        font-size: 30px;
+        margin: 16px 0;
+        cursor: pointer;
+        outline: none;
+      }
+
+      img {
+        display: block;
+        margin: auto;
+      }
+
+    </style>
   </head>
-  <body>
-    <script></script>
+    <button class="find">Find a rabbit 💘</button>
+    <img src="img/carrot.png" alt="carrot" class="carrot">
+    <img src="img/carrot.png" alt="carrot" class="carrot">
+    <img src="img/carrot.png" alt="carrot" class="carrot">
+    <img src="img/carrot.png" alt="carrot" class="carrot">
+    <img src="img/carrot.png" alt="carrot" class="carrot">
+    <img id='rabbit' src="img/rabbit.png" alt="rabbit" class="rabbit">
+    <img src="img/carrot.png" alt="carrot" class="carrot">
+    <img src="img/carrot.png" alt="carrot" class="carrot">
+    <img src="img/carrot.png" alt="carrot" class="carrot">
+    <img src="img/carrot.png" alt="carrot" class="carrot">
+
+    <script>
+      const find = document.querySelector('.find');
+      const rabbit = document.querySelector('#rabbit');
+      find.addEventListener('click', ()=> {
+        rabbit.scrollIntoView({behavior: 'smooth', block:'center'});
+      })
+    
+    </script>
   </body>
 </html>
